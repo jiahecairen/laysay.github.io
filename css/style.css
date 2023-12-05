@@ -230,7 +230,7 @@ a:hover {
   justify-content: space-between;
 }
 .main {
-  flex-grow: 1;
+  flex-grow: 0.5;
   flex-shrink: 0;
   flex-basis: auto;
 }
