@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   setInterval(() => {
     currentIndex = (currentIndex + 1) % textList.length;
-    textTransitionElement.textContent = textList[currentIndex];
+    textTransitionElement.style.opacity = 0;
+
+    setTimeout(() => {
+      textTransitionElement.textContent = textList[currentIndex];
+      textTransitionElement.style.opacity = 1;
+    }, 500);
   }, 1000);
 });
