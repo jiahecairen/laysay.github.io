@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const moonInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % textList.length;
       textTransitionElement.textContent = textList[currentIndex];
-    }, 700);
+    }, 2000);
   
     const darkToggle = document.getElementById('darkToggle');
     const body = document.body;

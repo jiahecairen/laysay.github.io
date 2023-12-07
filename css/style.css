@@ -58,7 +58,7 @@ body {
   color: #eee;
 }
 
-.dark-mode #header .site-name #logo span, #header .site-name #logo:hover {
+.dark-mode #header .site-name #logo:hover {
   color: #fff;
 }
 
@@ -72,8 +72,8 @@ body {
 }
 
 .dark-mode #header #nav-menu a.current {
-  /* border: 1px solid #aaa; */
-  border-bottom-color: #fff;
+  border: 1px solid #aaa;
+  border-bottom-color: #333;
 }
 
 .dark-mode .post .post-title a {
@@ -98,6 +98,11 @@ body {
   text-align: left;
   text-justify: distribute;
   word-break: break-word;
+}
+
+.dark-mode .post-archive .date {
+  padding-right: 0.7em;
+  color: #777;
 }
 
 .dark-mode .post .post-title {
@@ -167,6 +172,11 @@ body {
   color: #bbb;
 }
 
+.dark-mode a {
+  background-color: transparent;
+  color: #bbb;
+}
+
 .dark-mode .page-navigator a.next, .page-navigator span.next {
   float: right;
   color: #ddd;
@@ -199,6 +209,11 @@ button.submit {
   transition: all 0.1s ease-in;
 }
 
+.dark-mode a:hover,
+a:active {
+  color: #eee;
+}
+
 a:hover,
 a:active {
   color: #444;
@@ -217,13 +232,13 @@ div {
 }
 
 #header {
-  padding: 58px 0 0;
+  padding: 20px 0 0;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #bbb;
   position: relative;
 }
 #header .site-name {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 #header .site-name h1 {
   padding: 0;
@@ -651,6 +666,7 @@ div {
 }
 .post-archive .date {
   padding-right: 0.7em;
+  color: #aaa;
 }
 
 /* for archive page ends*/
@@ -669,7 +685,7 @@ div {
     border-left-width: 0px;
   }
   #header .site-name {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-align: center;
   }
   #header #nav-menu {
@@ -677,6 +693,32 @@ div {
     text-align: center;
   }
   #header #nav-menu a {
+    padding: 0 15px;
+    line-height: 27px;
+    height: 27px;
+    font-size: 13px;
+  }
+  #header #nav-menu a {
+    padding: 0 15px;
+    line-height: 27px;
+    height: 27px;
+    font-size: 13px;
+  }
+  .dark-mode #header .site-name {
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  .dark-mode #header #nav-menu {
+    position: relative;
+    text-align: center;
+  }
+  .dark-mode #header #nav-menu a {
+    padding: 0 15px;
+    line-height: 27px;
+    height: 27px;
+    font-size: 13px;
+  }
+  .dark-mode #header #nav-menu a {
     padding: 0 15px;
     line-height: 27px;
     height: 27px;
