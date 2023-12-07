@@ -6,5 +6,5 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(() => {
     currentIndex = (currentIndex + 1) % textList.length;
     textTransitionElement.textContent = textList[currentIndex];
-  }, 1000);
+  }, 700);
 });
