@@ -15,7 +15,7 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - {name: SVIP, server: h2.clco.in, port: 36119, client-fingerprint: chrome, type: vmess, uuid: 3b45b69f-4fda-4b15-ba94-d2d34b6e06bc, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: d202.clco.in}}}
+  - {name: SVIP, server: h2.clco.in, port: 36119, client-fingerprint: chrome, type: vmess, uuid: 3b45b69f-4fda-4b15-ba94-d2d34b6e06bc, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: h2.clco.in}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
