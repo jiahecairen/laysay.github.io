@@ -7,7 +7,10 @@
   const englishLabels = Array.from(fields, field =>
     field.tagName === 'OPTION' ? field.textContent : field.placeholder);
   const translations = document.querySelectorAll('.site-chinese-version');
-  let preference = readStorage('localStorage', 'laysay-language');
+  const languageEntry = /^\/(cn|en)(?:\/|\/index.html)?$/.exec(location.pathname);
+  const explicitLanguage = languageEntry ? (languageEntry[1] === 'cn' ? 'zh-CN' : 'en') : null;
+  let preference = explicitLanguage || readStorage('localStorage', 'laysay-language');
+  if (explicitLanguage) storeLanguage('localStorage', 'laysay-language', explicitLanguage);
   let detected = readStorage('sessionStorage', 'laysay-ip-language');
 
   function readStorage(storage, key) {
@@ -33,7 +36,11 @@
     const wasChinese = root.dataset.articleLanguage === 'zh-CN';
     root.lang = language;
     root.dataset.articleLanguage = language;
-    if (title) document.title = chinese ? title.dataset.titleZh : englishTitle;
+    if (title) {
+      const moon = document.title.match(/Lay([🌑🌒🌓🌔🌕🌖🌗🌘])Say/u)?.[1] || '🌓';
+      document.title = (chinese ? title.dataset.titleZh : englishTitle)
+        .replace(/(Lay)[🌑🌒🌓🌔🌕🌖🌗🌘](Say)/u, '$1' + moon + '$2');
+    }
     fields.forEach((field, index) => {
       const label = chinese ? field.dataset.placeholderZh : englishLabels[index];
       if (field.tagName === 'OPTION') field.textContent = label;

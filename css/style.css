@@ -448,8 +448,8 @@ div {
   display: inline-block;
   margin: 0 5px 5px 0;
 }
-.page-navigator a,
-.page-navigator span {
+.page-navigator > a,
+.page-navigator > span {
   display: inline-block;
   height: 25px;
   line-height: 25px;
@@ -457,27 +457,27 @@ div {
   border: 1px solid #DDD;
   text-align: center;
 }
-.page-navigator a:hover,
-.page-navigator span:hover {
+.page-navigator > a:hover,
+.page-navigator > span:hover {
   background: #F8F8F8;
   border-bottom-color: #D26911;
 }
-.page-navigator a.prev,
-.page-navigator span.prev {
+.page-navigator > a.prev,
+.page-navigator > span.prev {
   float: left;
 }
-.page-navigator a.prev:before,
-.page-navigator span.prev:before {
+.page-navigator > a.prev:before,
+.page-navigator > span.prev:before {
   font-family: "FontAwesome";
   content: "\f100";
   padding-right: 0.3em;
 }
-.page-navigator a.next,
-.page-navigator span.next {
+.page-navigator > a.next,
+.page-navigator > span.next {
   float: right;
 }
-.page-navigator a.next:after,
-.page-navigator span.next:after {
+.page-navigator > a.next:after,
+.page-navigator > span.next:after {
   font-family: "FontAwesome";
   content: "\f101";
   padding-left: 0.3em;
@@ -2349,4 +2349,22 @@ html[data-moon-theme] body .readmore a:hover {
     outline: 2px solid var(--moon-accent, #f0bd96);
     outline-offset: 3px;
   }
+}
+html.dark-mode body .page-navigator > a:hover,
+html.dark-mode body .page-navigator > a:focus-visible {
+  background: #444;
+  color: #eee;
+  border-color: #999;
+}
+
+html[data-moon-theme] body .page-navigator > a,
+html[data-moon-theme] body .page-navigator > span {
+  border-color: var(--moon-border);
+}
+
+html[data-moon-theme] body .page-navigator > a:hover,
+html[data-moon-theme] body .page-navigator > a:focus-visible {
+  background: var(--moon-surface);
+  color: var(--moon-text);
+  border-color: var(--moon-accent);
 }
