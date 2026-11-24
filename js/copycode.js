@@ -24,7 +24,7 @@
                     "positionClass": "toast-top-center",
                     "timeOut": "1000",
                 }
-                toastr.success(successText)
+                toastr.success(document.documentElement.lang === "zh-CN" ? "复制成功！" : successText)
             }
         });
 }(window, document);
